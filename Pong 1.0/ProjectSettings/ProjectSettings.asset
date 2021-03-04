@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 13
-  productGUID: df244149628973449bd95ebb93d477d5
+  productGUID: 5abbea887cbfa2a46aa2dd61e4d091e7
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -121,8 +121,8 @@ PlayerSettings:
     4:3: 0
     5:4: 0
     16:10: 0
-    16:9: 0
-    Others: 1
+    16:9: 1
+    Others: 0
   bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
@@ -599,14 +599,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled:
-    Collab: 1
-    UNet: 1
+  cloudServicesEnabled: {}
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 7ee6327b-9b2f-4f14-91ea-622829e25119
-  projectName: Pong 1.0
-  organizationId: unity_9a989e260817ebae9237
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
