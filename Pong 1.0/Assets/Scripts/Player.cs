@@ -22,6 +22,8 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		
+
+        m_Velocity.y = Input.GetAxisRaw(m_InputName) * m_Speed;
+        m_Rigidbody2D.velocity = m_Velocity;
 	}
 }
