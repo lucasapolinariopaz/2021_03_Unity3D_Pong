@@ -60,11 +60,13 @@ public class Ball : MonoBehaviour {
                 UpdateVelocity(m_Velocity.x, -m_Velocity.y);
                 break;
             case "WallLeft":
+                GameplayManager.Instance.IncScore(GameplayManager.PlayerType.P2);
                 ResetSpeed();
                 UpdateVelocity(1.0f, 0.0f);
                 transform.position = m_InitialPosition;
                 break;
             case "WallRight":
+                GameplayManager.Instance.IncScore(GameplayManager.PlayerType.P1);
                 ResetSpeed();
                 UpdateVelocity(-1.0f, 0.0f);
                 transform.position = m_InitialPosition;
