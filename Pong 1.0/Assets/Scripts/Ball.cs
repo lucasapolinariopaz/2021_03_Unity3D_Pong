@@ -18,6 +18,8 @@ public class Ball : MonoBehaviour {
     private float m_InitialSpeed;
     private Vector3 m_InitialPosition;
 
+    private AudioSource m_AudioSource;
+
     // Use this for initialization
     void Start () {
 
@@ -30,6 +32,8 @@ public class Ball : MonoBehaviour {
 
         m_InitialSpeed = m_Speed;
         m_InitialPosition = transform.position;
+
+        m_AudioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -39,7 +43,9 @@ public class Ball : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        switch(other.gameObject.name)
+        m_AudioSource.Play();
+
+        switch (other.gameObject.name)
         {
             case "PaddleP1":
                 IncSpeed();
