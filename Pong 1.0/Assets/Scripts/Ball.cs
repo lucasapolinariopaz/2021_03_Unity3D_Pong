@@ -20,7 +20,16 @@ public class Ball : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+
+        Random.InitState((int)System.DateTime.Now.Ticks);
+
+        m_Velocity = m_Speed * (Random.Range(0, 100) < 50 ? Vector2.left : Vector2.right);
+
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
+        m_Rigidbody2D.velocity = m_Velocity;
+
+        m_InitialSpeed = m_Speed;
+        m_InitialPosition = transform.position;
 	}
 	
 	// Update is called once per frame
