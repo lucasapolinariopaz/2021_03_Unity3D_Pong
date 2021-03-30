@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameplayManager : MonoBehaviour {
 
@@ -25,11 +26,15 @@ public class GameplayManager : MonoBehaviour {
         m_Score = new int[2];
         ResetScore();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape) || m_IsGameOver && Input.anyKeyDown)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+    }
 
     private void SetGameOver(bool isGameOver)
     {
@@ -42,7 +47,6 @@ public class GameplayManager : MonoBehaviour {
     {
         m_Score[0] = 0;
         m_Score[1] = 0;
-        m_IsGameOver = false;
         SetGameOver(false);
         m_UITextScore[0].text = m_Score[0].ToString();
         m_UITextScore[1].text = m_Score[1].ToString();
