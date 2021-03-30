@@ -5,13 +5,6 @@
 
 public class Ball : MonoBehaviour {
 
-    [SerializeField]
-    private float m_Speed;
-    [SerializeField]
-    private float m_MaxSpeed;
-    [SerializeField]
-    private float m_SpeedIncBy;
-
     private Rigidbody2D m_Rigidbody2D;
     private Vector2 m_Velocity;
 
@@ -19,6 +12,10 @@ public class Ball : MonoBehaviour {
     private Vector3 m_InitialPosition;
 
     private AudioSource m_AudioSource;
+
+    [SerializeField] private float m_Speed;
+    [SerializeField] private float m_MaxSpeed;
+    [SerializeField] private float m_SpeedIncBy;
 
     // Use this for initialization
     void Start () {
